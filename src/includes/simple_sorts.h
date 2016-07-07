@@ -8,6 +8,7 @@
 #define SIMPLE_SORTS_H
 #include "common.h"
 
-void insertion_sort(generic base, size_t base_size, size_t set_size, compare less);
+void insertion_sort(generic base, size_t const base_size, size_t const set_size, compare less);
+void selection_sort(generic base, size_t const base_size, size_t const set_size, compare less);
 
 #endif // SIMPLE_SORTS_H

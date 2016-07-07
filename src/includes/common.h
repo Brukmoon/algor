@@ -8,6 +8,9 @@
 #define COMMON_H
 #include <stdlib.h>
 #include <stdbool.h>
+// access element of generic array
+#define ELEMENT(index, base, base_size) \
+	(char *)base + base_size*index
 // for each element in set of length
 #define FOR_EACH(set, length) \
 	for(unsigned i = 0; i < length; ++i)
