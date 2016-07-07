@@ -4,8 +4,8 @@
  * @email: MHlous@gmail.com
  *
  **/
-#define EXIT_SUCCESS 0;
-#define EXIT_FAILURE 1;
+#include <stdio.h>
+#include "common.h"
 
 int main(int argc, char* argv[])
 {
