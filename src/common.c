@@ -1,7 +1,13 @@
+#include <stdio.h>
 #include <string.h>
 #include "common.h"
 
-void swap(generic first, generic second, size_t const object_size)
+void alloc_err(void)
+{
+	fprintf(stderr, "Error: Allocation failure in function %s.", __FUNCTION__);
+}
+
+void swap(void *first, void *second, size_t const object_size)
 {
 	void *temp = malloc(object_size);
 	memcpy(temp, first, object_size);
