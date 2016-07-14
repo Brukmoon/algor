@@ -1,3 +1,9 @@
+/*
+* @brief: Testing API
+* @author: Michal H.
+* @email: MHlous@gmail.com
+*
+**/
 #ifndef TEST_H
 #define TEST_H
 #ifndef __FUNCTION__
