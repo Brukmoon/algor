@@ -1,5 +1,8 @@
 #ifndef TEST_H
 #define TEST_H
+#ifndef __FUNCTION__
+#define __FUNCTION__ "unknown"
+#endif // __FUNCTION__
 #include <stdio.h>
 
 #define TEST_CASE_PREFIX() test_
@@ -12,6 +15,7 @@
 #define TEST_LOG(format, ...) fprintf(TEST_OUT_TARGET, format, __VA_ARGS__)
 // Tests the main runs
 #define TEST_RUN_IT() test_runs()
+
 
 // current tests to run
 void test_runs();

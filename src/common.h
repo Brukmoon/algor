@@ -8,9 +8,6 @@
 #define COMMON_H
 #include <stdlib.h>
 #include <stdbool.h>
-#ifndef __FUNCTION__
-#define __FUNCTION__ "unknown"
-#endif // __FUNCTION__
 // access element of generic array
 #define ELEMENT(index, base, base_size) \
 	((char *)(base) + (index) * (base_size))
