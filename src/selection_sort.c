@@ -11,9 +11,7 @@ void selection_sort(void const* base, size_t const base_size, size_t const set_s
 			void *curr = ELEMENT(j, base, base_size);
 			// is curr smaller than min?
 			if (less(curr, min))
-			{
 				min = curr;
-			}
 		}
 		// swap base[i] with min
 		swap(ELEMENT(i, base, base_size), min, base_size);
