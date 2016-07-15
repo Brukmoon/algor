@@ -1,7 +1,7 @@
 /*
-* @brief: Common definitions
-* @author: Michal H.
-* @email: MHlous@gmail.com
+* \brief   Common definitions
+* \author: Michal H.
+* \email:  MHlous@gmail.com
 *
 **/
 #ifndef COMMON_H
@@ -11,9 +11,6 @@
 // access element of generic array
 #define ELEMENT(index, base, base_size) \
 	((char *)(base) + (index) * (base_size))
-// for each element in set of length
-#define FOR_EACH(set, length) \
-	for(size_t i = 0; i < length; ++i)
 
 // compare function pointer
 typedef bool(*compare)(void *const first, void *const second);

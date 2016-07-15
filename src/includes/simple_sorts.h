@@ -1,7 +1,7 @@
 /*
- * @brief: Algorithms effective on small sets only
- * @author: Michal H.
- * @email: MHlous@gmail.com
+ * \brief   Algorithms effective on small sets only
+ * \author: Michal H.
+ * \email:  MHlous@gmail.com
  *
  **/
 #ifndef SIMPLE_SORTS_H

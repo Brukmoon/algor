@@ -1,7 +1,7 @@
 /*
- * @brief: C console testing framework
- * @author: Michal H.
- * @email: MHlous@gmail.com
+ * \brief   C console testing framework.
+ * \author  Michal H.
+ * \email   MHlous@gmail.com
  *
  **/
 #include "test.h"
