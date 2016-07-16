@@ -3,6 +3,8 @@
 
 void selection_sort(void const* base, size_t const base_size, size_t const set_size, compare less)
 {
+	if (base == NULL || less == NULL || base_size == 0)
+		return;
 	for (size_t i = 0; i < set_size; ++i)
 	{
 		void *min = ELEMENT((set_size - 1), base, base_size);
