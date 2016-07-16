@@ -10,8 +10,9 @@
 #include "test.h"
 
 TEST_CASE(selection_sort);
+TEST_CASE(insertion_sort);
 
-// \brief Generic less function for sorting algors - is a < b?
-bool less(void *a, void *b);
+// \brief Integer less function for sorting algors - is a < b?
+bool lessi(int *const a, int *const b);
 
 #endif // TEST_SORTING_H

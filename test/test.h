@@ -27,7 +27,7 @@
 // \brief Standard message REQUIRE parameters
 #define FLF __FILE__, __LINE__, __FUNCTION__
 #define REQUIRE(expr, err_format, ...) if (!(expr)) { TEST_LOG(err_format, __VA_ARGS__); test_count_failed++; } test_count++
-#define REQUIRE_SORTED(arr, size, object_size) REQUIRE(sorted(arr, size, object_size), "%s(%d): error in %s: \"array sorted\" failed\n", FLF))
+#define REQUIRE_SORTED(arr, size, base_size, less) REQUIRE(sorted(arr, size, base_size, less), "%s(%d): error in %s: \"array sorted\" failed\n", FLF)
 #define REQUIRE_EQ(first, second) REQUIRE((first) == (second), "%s(%d): error in %s: \"%d == %d\" failed\n", FLF, first, second)
 #define REQUIRE_LESS(less, more) REQUIRE((less) < (more), "%s(%d): error in %s: \"%d < %d\" failed\n", FLF, less, more)
 #define REQUIRE_MORE(more, less) REQUIRE((more) > (less), "%s(%d): error in %s: \"%d > %d\" failed\n", FLF, more, less)
@@ -64,7 +64,7 @@ unsigned test_count_failed;
 // \brief Prints test statistics.
 void final_statistics();
 // \brief Is the array sorted?
-bool sorted(void *const base, size_t const size, size_t const base_size);
+bool sorted(void *const base, size_t const size, size_t const base_size, compare less);
 
 // \brief Test registry.
 void run_tests();
