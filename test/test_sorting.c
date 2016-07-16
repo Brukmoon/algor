@@ -3,17 +3,7 @@
 
 TEST_CASE(selection_sort)
 {
-	CASE_INFO();
-	SECTION("Basic sorting")
-	{
-		int data1[] = { 9, 6, 7, 8, 4, 1, 2, 3, 0 };
-		selection_sort(data1, sizeof(int), sizeof(data1) / sizeof(int), less);
-		REQUIRE_SORTED(data1, sizeof(data1) / sizeof(int), sizeof(int));
-		REQUIRE_SORTED(data1, sizeof(data1) / sizeof(int), sizeof(int));
-		REQUIRE_SORTED(data1, sizeof(data1) / sizeof(int), sizeof(int));
-		REQUIRE_SORTED(data1, sizeof(data1) / sizeof(int), sizeof(int));
-		REQUIRE_SORTED(data1, sizeof(data1) / sizeof(int), sizeof(int));
-	}
+	REQUIRE_LESS(5, 1);
 }
 
 bool less(void *a, void *b)
