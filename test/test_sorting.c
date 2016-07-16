@@ -4,6 +4,8 @@
 TEST_CASE(selection_sort)
 {
 	REQUIRE_LESS(5, 1);
+	REQUIRE_MORE(5, 1);
+	REQUIRE_TRUE(false);
 }
 
 bool less(void *a, void *b)

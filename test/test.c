@@ -8,5 +8,5 @@ void run_tests()
 
 void final_statistics()
 {
-	TEST_LOG("\n\n###########\n:: %d failed, %d total.\n", test_count_failed, test_count);
+	TEST_LOG ("\n========== Test: %d succeeded, %d failed, %d total ==========\n", test_count - test_count_failed, test_count_failed, test_count);
 }

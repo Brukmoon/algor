@@ -9,10 +9,9 @@
 #include <stdbool.h>
 #include "test.h"
 
-bool less(void *a, void *b);
-bool sorted(void *const base, size_t const size, size_t const base_size);
-
-TEST_CASE(master);
 TEST_CASE(selection_sort);
+
+// \brief Generic less function for sorting algors - is a < b?
+bool less(void *a, void *b);
 
 #endif // TEST_SORTING_H

@@ -27,14 +27,12 @@
 // \brief Standard message REQUIRE parameters
 #define FLF __FILE__, __LINE__, __FUNCTION__
 #define REQUIRE(expr, err_format, ...) if (!(expr)) { TEST_LOG(err_format, __VA_ARGS__); test_count_failed++; } test_count++
-#define REQUIRE_SORTED(arr, size, object_size) REQUIRE(sorted(arr, size, object_size), "%s(%d): error in %s: \"array sorted\" failed", FLF))
-#define REQUIRE_EQ(first, second) REQUIRE((first) == (second), "%s(%d): error in %s: \"%d == %d\" failed", FLF, first, second)
-#define REQUIRE_LESS(less, more) REQUIRE((less) < (more), "%s(%d): error in %s: \"%d < %d\" failed", FLF, less, more)
-#define REQUIRE_MORE(more, less) REQUIRE((more) > (less), "%s(%d): error in %s: \"%d > %d\" failed", FLF, more, less)
-#define REQUIRE_TRUE(expr) REQUIRE(expr, "%s(%d): error in %s: \"expression true\" failed", FLF)
-#define REQUIRE_FALSE(expr) REQUIRE(expr, "%s(%d): error in %s: \"expression false\" failed", FLF)
-
-#define CRASH()
+#define REQUIRE_SORTED(arr, size, object_size) REQUIRE(sorted(arr, size, object_size), "%s(%d): error in %s: \"array sorted\" failed\n", FLF))
+#define REQUIRE_EQ(first, second) REQUIRE((first) == (second), "%s(%d): error in %s: \"%d == %d\" failed\n", FLF, first, second)
+#define REQUIRE_LESS(less, more) REQUIRE((less) < (more), "%s(%d): error in %s: \"%d < %d\" failed\n", FLF, less, more)
+#define REQUIRE_MORE(more, less) REQUIRE((more) > (less), "%s(%d): error in %s: \"%d > %d\" failed\n", FLF, more, less)
+#define REQUIRE_TRUE(expr) REQUIRE(expr, "%s(%d): error in %s: \"expression true\" failed\n", FLF)
+#define REQUIRE_FALSE(expr) REQUIRE(expr, "%s(%d): error in %s: \"expression false\" failed\n", FLF)
 
 // \brief Target stream for logging.
 #define TEST_OUT_TARGET stderr
@@ -47,7 +45,7 @@
 #define TEST_FAIL(format, ...) test_count_failed++; TEST_LOG(format, __VA_ARGS__)
 
 // selects main implementation file
-#define TEST_CONFIG_MAIN int main(void) { TEST_LOG("%s %s\n", __DATE__, __TIME__); TEST_RUN_IT(); final_statistics(); return test_count_failed; }
+#define TEST_CONFIG_MAIN int main(void) { TEST_LOG("%s %s\n\n", __DATE__, __TIME__); TEST_RUN_IT(); final_statistics(); return test_count_failed; }
 // Tests the main runs
 #define TEST_RUN_IT() run_tests()
 // function name prefix to prevent clashes
@@ -63,8 +61,12 @@ unsigned test_count;
 // \brief Number of failed tests.
 unsigned test_count_failed;
 
+// \brief Prints test statistics.
 void final_statistics();
-// \brief Test register.
+// \brief Is the array sorted?
+bool sorted(void *const base, size_t const size, size_t const base_size);
+
+// \brief Test registry.
 void run_tests();
 
 #endif // TEST_H
