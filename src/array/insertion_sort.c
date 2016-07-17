@@ -14,7 +14,7 @@ void insertion_sort(void *const base, size_t const base_size, size_t const set_s
 		memcpy(temp, ELEMENT(i, base, base_size), base_size);
 		size_t j = i - 1;
 		// find arr[i]'s place
-		while((j <= set_size) && less(temp, ELEMENT(j, base, base_size)))
+		while((j < set_size) && less(temp, ELEMENT(j, base, base_size)))
 		{
 			// if arr[i] is smaller than arr[j] and the array is not out of bounds, we can shift arr[j] to arr[j+1]
 			memcpy(ELEMENT(j + 1, base, base_size), (ELEMENT(j, base, base_size)), base_size);
