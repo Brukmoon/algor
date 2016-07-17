@@ -6,7 +6,7 @@ void run_tests(void)
 	// Add test functions you want to run here, comment out those you want ignored
 	TEST_CASE_RUN(selection_sort);
 	TEST_CASE_RUN(insertion_sort);
-	//TEST_CASE_RUN(binary_search);
+	TEST_CASE_RUN(binary_search);
 }
 
 void final_statistics(void)

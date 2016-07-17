@@ -13,9 +13,9 @@ int comp(int *const first, int *const second)
 	if (first == NULL || second == NULL)
 		return -1;
 	if (*first < *second)
-		return 0;
+		return LESS;
 	else if (*first > *second)
-		return 1;
+		return MORE;
 	else
-		return 2;
+		return EQUAL;
 }

@@ -16,7 +16,6 @@
  *
  **/
 #define TEST_CASE(name) void TEST_CASE_PREFIX()##name##()
-#define CASE_INFO() TEST_LOG("\n-- CASE %s --\n", __FUNCTION__)
 /*
  * \brief   Runs a test case, should be called in the run_tests routine.
  * \warning The test case must be first defined with TEST_CASE.
@@ -26,6 +25,7 @@
 
 // \brief REQUIRE fprintf parameters.
 #define FLF __FILE__, __LINE__, __FUNCTION__
+// \brief Assertions.
 #define REQUIRE(expr, err_format, ...) do { if (!(expr)) { TEST_LOG(err_format, __VA_ARGS__); test_count_failed++; } test_count++; } while(0)
 #define REQUIRE_SORTED(arr, base_size, set_size, less) REQUIRE(sorted(arr, base_size, set_size, less), "%s(%d): error in %s: \"array sorted\" failed\n", FLF)
 #define REQUIRE_EQ(first, second) REQUIRE((first) == (second), "%s(%d): error in %s: \"%d == %d\" failed\n", FLF, first, second)
