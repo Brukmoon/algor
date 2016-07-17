@@ -3,19 +3,19 @@
 
 TEST_CASE(selection_sort)
 {
-	int arr[] = { 8, 2, 1, 3, 0 };
-	selection_sort(arr, sizeof(int), sizeof(arr) / sizeof(int), lessi);
-	REQUIRE_SORTED(arr, sizeof(arr) / sizeof(int), sizeof(int), lessi);
+	int data[] = { 1.3, 1.327, 3.86, 2.0, 1.48 };
+	selection_sort(data, sizeof(int), sizeof(data) / sizeof(int), less);
+	REQUIRE_SORTED(data, sizeof(int), sizeof(data) / sizeof(int), less);
 }
 
 TEST_CASE(insertion_sort)
 {
-	int arr[] = { 5, 4, 3, 2, 1 };
-	insertion_sort(arr, sizeof(int), sizeof(arr) / sizeof(int), lessi);
-	REQUIRE_SORTED(arr, sizeof(arr) / sizeof(int), sizeof(int), lessi);
+	int data[] = { 1.328, 1.327, 3.86, 2.0, 1.48 };
+	insertion_sort(data, sizeof(int), sizeof(data) / sizeof(int), less);
+	REQUIRE_SORTED(data, sizeof(int), sizeof(data) / sizeof(int), less);
 }
 
-bool lessi(const int *const a, const int *const b)
+bool less(const int *const a, const int *const b)
 {
 	if (*a < *b)
 		return true;

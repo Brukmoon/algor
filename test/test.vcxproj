@@ -157,10 +157,12 @@
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="test.c" />
+    <ClCompile Include="test_search.c" />
     <ClCompile Include="test_sorting.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h" />
+    <ClInclude Include="test_search.h" />
     <ClInclude Include="test_sorting.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

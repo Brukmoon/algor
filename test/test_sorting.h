@@ -10,8 +10,8 @@
 #include <stdbool.h>
 #include "test.h"
 
-// \brief Integer less function for sorting algors - is a < b?
-bool lessi(const int *const a, const int *const b);
+// \brief Less function accepting integers - is a < b?
+bool less(const int *const a, const int *const b);
 
 /*
  * Test cases declarations.

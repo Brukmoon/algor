@@ -27,7 +27,7 @@
 // \brief REQUIRE fprintf parameters.
 #define FLF __FILE__, __LINE__, __FUNCTION__
 #define REQUIRE(expr, err_format, ...) do { if (!(expr)) { TEST_LOG(err_format, __VA_ARGS__); test_count_failed++; } test_count++; } while(0)
-#define REQUIRE_SORTED(arr, size, base_size, less) REQUIRE(sorted(arr, size, base_size, less), "%s(%d): error in %s: \"array sorted\" failed\n", FLF)
+#define REQUIRE_SORTED(arr, base_size, set_size, less) REQUIRE(sorted(arr, base_size, set_size, less), "%s(%d): error in %s: \"array sorted\" failed\n", FLF)
 #define REQUIRE_EQ(first, second) REQUIRE((first) == (second), "%s(%d): error in %s: \"%d == %d\" failed\n", FLF, first, second)
 #define REQUIRE_LESS(less, more) REQUIRE((less) < (more), "%s(%d): error in %s: \"%d < %d\" failed\n", FLF, less, more)
 #define REQUIRE_MORE(more, less) REQUIRE((more) > (less), "%s(%d): error in %s: \"%d > %d\" failed\n", FLF, more, less)
@@ -39,7 +39,7 @@
 // \brief Logging.
 #define TEST_LOG(format, ...) fprintf(TEST_OUT_TARGET, format, __VA_ARGS__)
 
-// \brief Selects main implementation file.
+// \brief Select main implementation file.
 #define TEST_CONFIG_MAIN int main(void) { TEST_LOG("%s %s\n\n", __DATE__, __TIME__); TEST_RUN(); final_statistics(); return test_count_failed; }
 // \brief Run the tests.
 #define TEST_RUN() run_tests()
@@ -59,7 +59,7 @@ unsigned test_count_failed;
 // \brief Print test statistics.
 void final_statistics(void);
 // \brief Is the array sorted?
-bool sorted(const void *const base, size_t const size, size_t const base_size, compare less);
+bool sorted(const void *const base, size_t const base_size, size_t const set_size, compare less);
 // \brief Test registrar.
 void run_tests(void);
 
