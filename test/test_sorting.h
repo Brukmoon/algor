@@ -6,13 +6,19 @@
 **/
 #ifndef TEST_SORTING_H
 #define TEST_SORTING_H
+
 #include <stdbool.h>
 #include "test.h"
 
+// \brief Integer less function for sorting algors - is a < b?
+bool lessi(const int *const a, const int *const b);
+
+/*
+ * Test cases declarations.
+ * To have them run, add them to the TEST_RUN macro.
+ *
+ **/
 TEST_CASE(selection_sort);
 TEST_CASE(insertion_sort);
-
-// \brief Integer less function for sorting algors - is a < b?
-bool lessi(int *const a, int *const b);
 
 #endif // TEST_SORTING_H

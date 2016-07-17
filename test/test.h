@@ -6,6 +6,7 @@
 **/
 #ifndef TEST_H
 #define TEST_H
+
 #include <stdio.h>
 #include "common.h"
 
@@ -15,6 +16,7 @@
  *
  **/
 #define TEST_CASE(name) void TEST_CASE_PREFIX()##name##()
+#define CASE_INFO() TEST_LOG("\n-- CASE %s --\n", __FUNCTION__)
 /*
  * \brief   Runs a test case, should be called in the run_tests routine.
  * \warning The test case must be first defined with TEST_CASE.
@@ -22,11 +24,9 @@
  **/
 #define TEST_CASE_RUN(name) TEST_CASE_PREFIX()##name##()
 
-#define CASE_INFO() TEST_LOG("\n-- CASE %s --\n", __FUNCTION__)
-#define SECTION(id) TEST_LOG(": SECTION %s\n", id)
-// \brief Standard message REQUIRE parameters
+// \brief REQUIRE fprintf parameters.
 #define FLF __FILE__, __LINE__, __FUNCTION__
-#define REQUIRE(expr, err_format, ...) if (!(expr)) { TEST_LOG(err_format, __VA_ARGS__); test_count_failed++; } test_count++
+#define REQUIRE(expr, err_format, ...) do { if (!(expr)) { TEST_LOG(err_format, __VA_ARGS__); test_count_failed++; } test_count++; } while(0)
 #define REQUIRE_SORTED(arr, size, base_size, less) REQUIRE(sorted(arr, size, base_size, less), "%s(%d): error in %s: \"array sorted\" failed\n", FLF)
 #define REQUIRE_EQ(first, second) REQUIRE((first) == (second), "%s(%d): error in %s: \"%d == %d\" failed\n", FLF, first, second)
 #define REQUIRE_LESS(less, more) REQUIRE((less) < (more), "%s(%d): error in %s: \"%d < %d\" failed\n", FLF, less, more)
@@ -39,16 +39,11 @@
 // \brief Logging.
 #define TEST_LOG(format, ...) fprintf(TEST_OUT_TARGET, format, __VA_ARGS__)
 
-// \brief Inform system the test passed.
-#define TEST_PASS(format, ...) TEST_LOG(format, __VA_ARGS__)
-// \brief Inform system the test failed.
-#define TEST_FAIL(format, ...) test_count_failed++; TEST_LOG(format, __VA_ARGS__)
-
-// selects main implementation file
-#define TEST_CONFIG_MAIN int main(void) { TEST_LOG("%s %s\n\n", __DATE__, __TIME__); TEST_RUN_IT(); final_statistics(); return test_count_failed; }
-// Tests the main runs
-#define TEST_RUN_IT() run_tests()
-// function name prefix to prevent clashes
+// \brief Selects main implementation file.
+#define TEST_CONFIG_MAIN int main(void) { TEST_LOG("%s %s\n\n", __DATE__, __TIME__); TEST_RUN(); final_statistics(); return test_count_failed; }
+// \brief Run the tests.
+#define TEST_RUN() run_tests()
+// \brief Function name prefix to prevent clashes.
 #define TEST_CASE_PREFIX() test_
 
 /*
@@ -61,12 +56,11 @@ unsigned test_count;
 // \brief Number of failed tests.
 unsigned test_count_failed;
 
-// \brief Prints test statistics.
-void final_statistics();
+// \brief Print test statistics.
+void final_statistics(void);
 // \brief Is the array sorted?
-bool sorted(void *const base, size_t const size, size_t const base_size, compare less);
-
-// \brief Test registry.
-void run_tests();
+bool sorted(const void *const base, size_t const size, size_t const base_size, compare less);
+// \brief Test registrar.
+void run_tests(void);
 
 #endif // TEST_H

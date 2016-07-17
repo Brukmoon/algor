@@ -1,6 +1,5 @@
-#include "test_sorting.h"
 #include "simple_sorts.h"
-#include <stdio.h>
+#include "test_sorting.h"
 
 TEST_CASE(selection_sort)
 {
@@ -16,17 +15,9 @@ TEST_CASE(insertion_sort)
 	REQUIRE_SORTED(arr, sizeof(arr) / sizeof(int), sizeof(int), lessi);
 }
 
-bool lessi(int *const a, int *const b)
+bool lessi(const int *const a, const int *const b)
 {
 	if (*a < *b)
 		return true;
 	return false;
-}
-
-bool sorted(void *const base, size_t const size, size_t const base_size, compare less)
-{
-	for (size_t i = 0; i < size - 1; ++i)
-		if (less(ELEMENT(i + 1, base, base_size), ELEMENT(i, base, base_size)))
-			return false;
-	return true;
 }

@@ -6,18 +6,20 @@
 **/
 #ifndef COMMON_H
 #define COMMON_H
-#include <stdlib.h>
+
 #include <stdbool.h>
-// access element of generic array
+#include <stdlib.h>
+
+// \brief Access element i of any array with base of size base_size.
 #define ELEMENT(index, base, base_size) \
 	((char *)(base) + (index) * (base_size))
 
-// compare function pointer
-typedef bool(*compare)(void *const first, void *const second);
+// \brief Pointer to a function that should compare two values.
+typedef bool(*compare)(const void *const first, const void *const second);
 
-// swaps first and second value
-void swap(void *first, void *second, size_t const object_size);
-// allocation error handle
+// \brief Swap first and second values.
+void swap(void *const first, void *const second, size_t object_size);
+// \brief Handle allocation error and possibly cleanup.
 void alloc_err(void);
 
 #endif // COMMON_H

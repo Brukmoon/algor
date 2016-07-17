@@ -8,8 +8,10 @@ void alloc_err(void)
 	abort();
 }
 
-void swap(void *first, void *second, size_t const object_size)
+void swap(void *const first, void *const second, size_t object_size)
 {
+	if (first == NULL || second == NULL || object_size == 0)
+		return;
 	void *temp = malloc(object_size);
 	memcpy(temp, first, object_size);
 	memcpy(first, second, object_size);

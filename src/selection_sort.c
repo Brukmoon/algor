@@ -1,6 +1,6 @@
 #include "simple_sorts.h"
 
-void selection_sort(void const* base, size_t const base_size, size_t const set_size, compare less)
+void selection_sort(void *const base, size_t const base_size, size_t const set_size, compare less)
 {
 	if (base == NULL || less == NULL || base_size == 0)
 		return;
