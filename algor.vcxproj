@@ -21,12 +21,14 @@
   <ItemGroup>
     <ClCompile Include="src\binary_search.c" />
     <ClCompile Include="src\common.c" />
+    <ClCompile Include="src\includes\linear_search.c" />
     <ClCompile Include="src\insertion_sort.c" />
     <ClCompile Include="src\selection_sort.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\includes\binary_search.h" />
     <ClInclude Include="src\includes\common.h" />
+    <ClInclude Include="src\includes\linear_search.h" />
     <ClInclude Include="src\includes\simple_sorts.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

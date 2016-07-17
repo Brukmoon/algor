@@ -29,6 +29,8 @@ enum compare
  * \return Index of the value found, -1 if value is not found.
  *
  **/
-int binary_search(void *const value, void *const base, size_t const base_size, size_t const set_size, int(*compare)(void *const first, void *const second));
+int binary_search(void const *const value, 
+	const void *const base, size_t const base_size, size_t const set_size, 
+	int(*compare)(void const *const first, void const *const second));
 
 #endif // BINARY_SEARCH

@@ -1,6 +1,8 @@
 #include "binary_search.h"
 
-int binary_search(void *const value, void *const base, size_t const base_size, size_t const set_size, int(*compare)(void *const first, void *const second))
+int binary_search(void const *const value, 
+	const void *const base, size_t const base_size, size_t const set_size, 
+	int(*compare)(void const *const first, void const *const second))
 {
 	if (value == NULL || base == NULL || base_size == 0 || set_size == 0 || compare == NULL)
 		return -1;

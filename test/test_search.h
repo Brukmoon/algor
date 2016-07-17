@@ -9,18 +9,12 @@
 
 #include "test.h"
 
-/* 
- * \brief  Compare two integers.
- * \return compare::LESS, compare::EQUAL, compare::MORE, -1 on error
- *
- **/
-int comp(int *const first, int *const second);
-
 /*
 * Test cases declarations.
 * To have them run, add them to the TEST_RUN macro.
 *
 **/
 TEST_CASE(binary_search);
+TEST_CASE(linear_search);
 
 #endif // TEST_SEARCH_H

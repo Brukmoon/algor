@@ -7,6 +7,7 @@ void run_tests(void)
 	TEST_CASE_RUN(selection_sort);
 	TEST_CASE_RUN(insertion_sort);
 	TEST_CASE_RUN(binary_search);
+	TEST_CASE_RUN(linear_search);
 }
 
 void final_statistics(void)

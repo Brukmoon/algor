@@ -10,9 +10,6 @@
 #include <stdbool.h>
 #include "test.h"
 
-// \brief Less function accepting integers - is a < b?
-bool less(const int *const a, const int *const b);
-
 /*
  * Test cases declarations.
  * To have them run, add them to the TEST_RUN macro.

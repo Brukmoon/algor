@@ -14,7 +14,7 @@
 #define ELEMENT(index, base, base_size) \
 	((char *)(base) + (index) * (base_size))
 
-// \brief Pointer to a function that compares two values.
+// \brief Pointer to a function that compares two values, returned value is implementation-defined.
 typedef bool(*compare)(const void *const first, const void *const second);
 
 // \brief Swap first and second values.
