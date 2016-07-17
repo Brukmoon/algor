@@ -5,6 +5,7 @@
 void alloc_err(void)
 {
 	fprintf(stderr, "Error: Allocation failure in function %s.", __FUNCTION__);
+	abort();
 }
 
 void swap(void *first, void *second, size_t const object_size)

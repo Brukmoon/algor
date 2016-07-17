@@ -6,6 +6,8 @@ void insertion_sort(void const* base, size_t const base_size, size_t const set_s
 	if (base == NULL || less == NULL || base_size == 0)
 		return;
 	void *temp = malloc(base_size);
+	if (temp == NULL)
+		alloc_err();
 	for (size_t i = 1; i < set_size; ++i)
 	{
 		// temp = arr[i]
