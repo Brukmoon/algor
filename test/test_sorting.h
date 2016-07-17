@@ -1,5 +1,5 @@
 /*
-* @brief   Individual unit tests
+* @brief   Individual unit tests of sorting routines.
 * @author: Michal H.
 * @email:  MHlous@gmail.com
 *
