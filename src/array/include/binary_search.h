@@ -9,7 +9,7 @@
 
 #include "common.h"
 
-enum compare
+enum
 {
 	LESS = 0,
 	EQUAL = 1,

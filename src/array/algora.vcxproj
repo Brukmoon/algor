@@ -19,22 +19,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\binary_search.c" />
-    <ClCompile Include="src\common.c" />
-    <ClCompile Include="src\includes\linear_search.c" />
-    <ClCompile Include="src\insertion_sort.c" />
-    <ClCompile Include="src\selection_sort.c" />
+    <ClCompile Include="..\common.c" />
+    <ClCompile Include="binary_insertion_sort.c" />
+    <ClCompile Include="binary_search.c" />
+    <ClCompile Include="insertion_sort.c" />
+    <ClCompile Include="linear_search.c" />
+    <ClCompile Include="selection_sort.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\includes\binary_search.h" />
-    <ClInclude Include="src\includes\common.h" />
-    <ClInclude Include="src\includes\linear_search.h" />
-    <ClInclude Include="src\includes\simple_sorts.h" />
+    <ClInclude Include="..\common.h" />
+    <ClInclude Include="include\binary_search.h" />
+    <ClInclude Include="include\linear_search.h" />
+    <ClInclude Include="include\simple_sorts.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{099F458B-4FCB-4D33-91D9-57C0954E00D6}</ProjectGuid>
+    <ProjectGuid>{75C21725-3423-446C-A0CD-9F106C6A02AA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>algor</RootNamespace>
+    <RootNamespace>algora</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -82,22 +83,22 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)lib\</OutDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)lib\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src;C:\Users\Michal\algor\src\array\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsC</CompileAs>
-      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -126,9 +127,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src;C:\Users\Michal\algor\src\array\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsC</CompileAs>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src\includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
