@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="compare.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="test.c" />
     <ClCompile Include="test_search.c" />
@@ -166,6 +167,7 @@
     <ClInclude Include="include\test.h" />
     <ClInclude Include="include\test_search.h" />
     <ClInclude Include="include\test_sorting.h" />
+    <ClInclude Include="compare.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

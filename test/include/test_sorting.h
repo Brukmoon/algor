@@ -17,5 +17,6 @@
  **/
 TEST_CASE(selection_sort);
 TEST_CASE(insertion_sort);
+TEST_CASE(binary_insertion_sort);
 
 #endif // TEST_SORTING_H

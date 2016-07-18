@@ -9,13 +9,6 @@
 
 #include "common.h"
 
-enum
-{
-	LESS = 0,
-	EQUAL = 1,
-	MORE = 2
-};
-
 /*
  * \brief          Binary search.
  * \param value    Value searched for.

@@ -14,8 +14,12 @@
 #define ELEMENT(index, base, base_size) \
 	((char *)(base) + (index) * (base_size))	
 
-// \brief Pointer to a function that compares two values, returned value is implementation-defined.
-typedef bool(*compare)(const void *const first, const void *const second);
+enum compare_values
+{
+	LESS = 0,
+	EQUAL = 1,
+	MORE = 2
+};
 
 // \brief Swap first and second values.
 void swap(void *const first, void *const second, size_t object_size);

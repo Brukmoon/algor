@@ -59,7 +59,8 @@ unsigned test_count_failed;
 // \brief Print test statistics.
 void final_statistics(void);
 // \brief Is the array sorted?
-bool sorted(const void *const base, size_t const base_size, size_t const set_size, compare less);
+bool sorted(void const *const base, size_t const base_size, size_t const set_size,
+	bool(*less)(void const *const first, void const *const second));
 // \brief Test registrar.
 void run_tests(void);
 

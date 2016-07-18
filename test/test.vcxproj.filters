@@ -23,6 +23,9 @@
     <ClCompile Include="test_search.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="compare.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\test.h">
@@ -32,6 +35,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\test_sorting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compare.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

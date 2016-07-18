@@ -14,6 +14,6 @@
 **/
 int linear_search(void const *const value, 
 	void const *const base, size_t const base_size, size_t const set_size,
-	compare equal);
+	bool(*equal)(const void *const first, const void *const second));
 
 #endif /* LINEAR_SEARCH_H */
