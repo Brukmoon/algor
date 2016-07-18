@@ -4,10 +4,10 @@
 #include <stdbool.h>
 
 /*
-* Compare two values.
-* \return LESS, EQUAL, MORE, -1 on error
-*
-**/
+ * Compare two values.
+ * \return LESS, EQUAL, MORE, -1 on error
+ *
+ **/
 int compare(int const *const a, int const *const b);
 // Are values equal?
 bool equal(int const *const a, int const *const b);

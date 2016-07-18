@@ -1,5 +1,5 @@
 /*
- * \brief   C console testing framework.
+ * C console testing framework.
  * \author  Michal H.
  * \email   MHlous@gmail.com
  *

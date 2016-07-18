@@ -1,16 +1,16 @@
 /*
-* \brief   Binary search implementation
-* \author: Michal H.
-* \email:  MHlous@gmail.com
-*
-**/
+ * Binary search implementation
+ * \author: Michal H.
+ * \email:  MHlous@gmail.com
+ *
+ **/
 #ifndef BINARY_SEARCH
 #define BINARY_SEARCH
 
 #include "common.h"
 
 /*
- * \brief          Binary search.
+ * Binary search.
  * \param value    Value searched for.
  * \param base     Pointer to array base.
  * \param set_size Length of the array.
