@@ -53,7 +53,7 @@ static size_t approx_binary_search(void *value, void *const base, size_t const b
 		k = (L + H) / 2;
 		if (compare(value, ELEMENT(k, base, base_size)) == LESS)
 		{
-			if (k - 1 > H) // integer overflow
+			if (k == 0) // integer overflow
 				break;
 			H = k - 1;
 		}
@@ -66,5 +66,6 @@ static size_t approx_binary_search(void *value, void *const base, size_t const b
 static void shift_right(void *const base, size_t const base_size, size_t const shift_count)
 {
 	for (size_t i = shift_count; i > 0; --i)
+		// arr[i] = arr[i-1]
 		memcpy(ELEMENT(i, base, base_size), ELEMENT(i - 1, base, base_size), base_size);
 }
