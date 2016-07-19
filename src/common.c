@@ -13,6 +13,8 @@ void swap(void *const first, void *const second, size_t object_size)
 	if (first == NULL || second == NULL || object_size == 0)
 		return;
 	void *temp = malloc(object_size);
+	if (temp == NULL)
+		alloc_err();
 	memcpy(temp, first, object_size);
 	memcpy(first, second, object_size);
 	memcpy(second, temp, object_size);

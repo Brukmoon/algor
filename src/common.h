@@ -14,11 +14,11 @@
 #define ELEMENT(index, base, base_size) \
 	((char *)(base) + (index) * (base_size))	
 
-enum compare_values
+enum compare_result
 {
 	LESS = 0,
 	EQUAL = 1,
-	MORE = 2
+	MORE = 2,
 };
 
 // Swap first and second values.
