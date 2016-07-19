@@ -15,6 +15,9 @@ int compare(int const *const a, int const *const b)
 
 bool equal(const int *const a, const int *const b)
 {
+	// cannot measure.
+	if (a == NULL || b == NULL)
+		return false;
 	if (*a == *b)
 		return true;
 	return false;
@@ -22,6 +25,8 @@ bool equal(const int *const a, const int *const b)
 
 bool less(const int *const a, const int *const b)
 {
+	if (a == NULL || b == NULL)
+		return false;
 	if (*a < *b)
 		return true;
 	return false;
