@@ -1,3 +1,9 @@
+/*
+ * Functions that compare values, needed for testing of certain algorithms.
+ * \author Michal H.
+ * \email  MHlous@gmail.com
+ *
+ **/
 #ifndef COMPARE_H
 #define COMPARE_H
 
