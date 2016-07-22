@@ -164,10 +164,10 @@
     <ClCompile Include="test_sorting.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\compare.h" />
     <ClInclude Include="include\test.h" />
     <ClInclude Include="include\test_search.h" />
     <ClInclude Include="include\test_sorting.h" />
-    <ClInclude Include="compare.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
