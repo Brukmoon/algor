@@ -18,7 +18,7 @@
     <ClInclude Include="..\common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\list.h">
+    <ClInclude Include="include\slist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -26,7 +26,7 @@
     <ClCompile Include="..\common.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="list.c">
+    <ClCompile Include="slist.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
