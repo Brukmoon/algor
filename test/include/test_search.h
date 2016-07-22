@@ -7,6 +7,10 @@
 #ifndef TEST_SEARCH_H
 #define TEST_SEARCH_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 #include "test.h"
 
 /*
@@ -16,5 +20,9 @@
  **/
 TEST_CASE(binary_search);
 TEST_CASE(linear_search);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #endif // TEST_SEARCH_H
