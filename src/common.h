@@ -1,11 +1,15 @@
 /*
-* \brief   Common definitions
-* \author: Michal H.
-* \email:  MHlous@gmail.com
+* Common definitions
+* \author Michal H.
+* \email  MHlous@gmail.com
 *
 **/
 #ifndef COMMON_H
 #define COMMON_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
 
 #include <stdbool.h>
 #include <stdlib.h>
@@ -25,5 +29,9 @@ enum compare_result
 void swap(void *const first, void *const second, size_t object_size);
 // Handle allocation error and possibly cleanup.
 void alloc_err(void);
+
+#ifdef __cplusplus
+ }
+#endif // __cplusplus
 
 #endif // COMMON_H

@@ -7,6 +7,10 @@
 #ifndef TEST_H
 #define TEST_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 #include <stdio.h>
 #include "common.h"
 
@@ -63,5 +67,9 @@ bool sorted(void const *const base, size_t const base_size, size_t const set_siz
 	bool(*less)(void const *const first, void const *const second));
 // Test registrar.
 void run_tests(void);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #endif // TEST_H

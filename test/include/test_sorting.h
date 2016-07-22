@@ -7,6 +7,10 @@
 #ifndef TEST_SORTING_H
 #define TEST_SORTING_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 #include <stdbool.h>
 #include "test.h"
 
@@ -18,5 +22,9 @@
 TEST_CASE(selection_sort);
 TEST_CASE(insertion_sort);
 TEST_CASE(binary_insertion_sort);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #endif // TEST_SORTING_H

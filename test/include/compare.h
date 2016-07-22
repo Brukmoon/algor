@@ -7,6 +7,10 @@
 #ifndef COMPARE_H
 #define COMPARE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
 #include <stdbool.h>
 
 /*
@@ -19,5 +23,9 @@ int compare(int const *const a, int const *const b);
 bool equal(int const *const a, int const *const b);
 // Is a less than b?
 bool less(int const *const a, int const *const b);
+
+#ifdef __cplusplus
+}
+#endif // __cplusplus
 
 #endif /* COMPARE_H */
