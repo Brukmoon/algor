@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)exe\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -91,15 +91,16 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Michal\algor\test\include;C:\Users\Michal\algor\src\array\include;C:\Users\Michal\algor\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src\list\include;C:\Users\Michal\algor\test\include;C:\Users\Michal\algor\src\array\include;C:\Users\Michal\algor\src</AdditionalIncludeDirectories>
       <ExpandAttributedSource>false</ExpandAttributedSource>
       <PreprocessToFile>false</PreprocessToFile>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Michal\algor\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>algora.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>algora.lib;algorl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -126,8 +127,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Michal\algor\test\include;C:\Users\Michal\algor\src\array\include;C:\Users\Michal\algor\src</AdditionalIncludeDirectories>
-      <CompileAs>Default</CompileAs>
+      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src\list\include;C:\Users\Michal\algor\test\include;C:\Users\Michal\algor\src\array\include;C:\Users\Michal\algor\src</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,7 +136,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Michal\algor\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>algora.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>algora.lib;algorl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -161,11 +162,13 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="test.c" />
     <ClCompile Include="test_search.c" />
+    <ClCompile Include="test_slist.c" />
     <ClCompile Include="test_sorting.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\compare.h" />
     <ClInclude Include="include\test.h" />
+    <ClInclude Include="include\test_list.h" />
     <ClInclude Include="include\test_search.h" />
     <ClInclude Include="include\test_sorting.h" />
   </ItemGroup>

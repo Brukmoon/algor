@@ -26,6 +26,9 @@
     <ClCompile Include="compare.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test_slist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\test.h">
@@ -38,6 +41,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\compare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\test_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,12 +21,18 @@
     <ClInclude Include="include\slist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\slist_node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\common.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="slist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slist_node.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

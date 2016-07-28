@@ -21,10 +21,12 @@
   <ItemGroup>
     <ClCompile Include="..\common.c" />
     <ClCompile Include="slist.c" />
+    <ClCompile Include="slist_node.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\common.h" />
     <ClInclude Include="include\slist.h" />
+    <ClInclude Include="include\slist_node.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A73B8AAB-382B-4B92-AE7D-16627480E683}</ProjectGuid>
@@ -91,8 +93,11 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src\list\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src;C:\Users\Michal\algor\src\list\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsC</CompileAs>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -121,8 +126,10 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src\list\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Michal\algor\src;C:\Users\Michal\algor\src\list\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AssemblerOutput>AssemblyCode</AssemblerOutput>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

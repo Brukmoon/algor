@@ -1,5 +1,6 @@
 #include "test_sorting.h"
 #include "test_search.h"
+#include "test_list.h"
 
 void run_tests(void)
 {
@@ -9,6 +10,7 @@ void run_tests(void)
 	TEST_CASE_RUN(binary_insertion_sort);
 	TEST_CASE_RUN(binary_search);
 	TEST_CASE_RUN(linear_search);
+	TEST_CASE_RUN(slist);
 }
 
 void final_statistics(void)
