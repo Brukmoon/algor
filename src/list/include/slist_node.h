@@ -9,14 +9,14 @@
 extern "C" {
 #endif // __cplusplus
 
-typedef void node_data;
-typedef struct slist_node
+typedef void* node_data;
+struct slist_node
 {
 	struct slist_node *next;
-	node_data *data;
-} slist_node;
+	node_data data;
+};
 
-slist_node *slist_new_node(void *data);
+struct slist_node *slist_new_node(node_data data);
 
 #ifdef __cplusplus
 }

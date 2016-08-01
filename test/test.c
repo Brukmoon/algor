@@ -4,7 +4,7 @@
 
 void run_tests(void)
 {
-	// Add test functions you want to run here, comment out those you want ignored
+	// Add test functions here, comment out those that should be ignored.
 	TEST_CASE_RUN(selection_sort);
 	TEST_CASE_RUN(insertion_sort);
 	TEST_CASE_RUN(binary_insertion_sort);

@@ -2,9 +2,9 @@
 #include "common.h"
 #include "slist_node.h"
 
-slist_node *slist_new_node(void *data)
+struct slist_node *slist_new_node(node_data data)
 {
-	slist_node *node = malloc(sizeof(*node));
+	struct slist_node *node = malloc(sizeof(*node));
 	if (node == NULL)
 		alloc_err();
 	node->next = NULL;
