@@ -12,7 +12,7 @@ struct slist *slist_new()
 	return list;
 }
 
-void slist_free(struct slist *list, void(*free_data)(node_data data))
+void slist_free(struct slist *list, void(*free_data)(slist_node_data data))
 {
 	if (list == NULL)
 		return;
@@ -21,53 +21,56 @@ void slist_free(struct slist *list, void(*free_data)(node_data data))
 	struct slist_node *iter = list->tail;
 	// Maybe rely on branch prediction to simplify the code.
 	if (free_data != NULL)
-	{
 		while (list->tail != NULL)
 		{
 			iter = list->tail->next;
 			free_data(list->tail->data);
-			free(list->tail);
+			slist_free_node(list->tail);
 			list->tail = iter;
 		}
-	}
 	else
-	{
 		while (list->tail != NULL)
 		{
 			iter = list->tail->next;
-			free(list->tail);
+			slist_free_node(list->tail);
 			list->tail = iter;
 		}
-	}
 	free(list);
 }
 
-struct slist_node *slist_push(struct slist *list, node_data data)
+struct slist_node *slist_push(struct slist *list, slist_node_data data)
 {
 	if (list == NULL)
 		return NULL;
 	struct slist_node *node = slist_new_node(data);
 	if (slist_empty(list))
-	{
 		list->tail = node;
-	}
 	else
-	{
 		list->head->next = node;
-	}
 	list->head = node;
 	++list->length;
 	return node;
 }
 
-void slist_pull(struct slist *list)
+void slist_pull(struct slist *list, void(*free_data)(slist_node_data data))
 {
 	if (slist_empty(list))
 		return;
-	struct slist_node *iter = list->tail, *prev = list->tail;
-	while (iter != NULL)
+	struct slist_node *iter = list->tail, *prev = NULL;
+	do
 	{
-	}
+		prev = iter;
+		iter = iter->next;
+	} while (iter != NULL && iter->next != NULL);
+	if (iter != list->tail)
+		prev->next = NULL;
+	else
+		list->tail = NULL;
+	list->head = prev;
+	if(free_data != NULL)
+		free_data(iter->data);
+	slist_free_node(iter);
+	--list->length;
 }
 
 bool slist_empty(struct slist const *list)

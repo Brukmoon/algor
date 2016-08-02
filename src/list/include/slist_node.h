@@ -1,5 +1,7 @@
 /*
- *
+ * A node in singly linked list.
+ * \author Michal H.
+ * \email  MHlous@gmail.com
  *
  **/
 #ifndef SLIST_NODE_H
@@ -9,14 +11,17 @@
 extern "C" {
 #endif // __cplusplus
 
-typedef void* node_data;
+// What data does the node keep?
+typedef void* slist_node_data;
+// Node in a singly linked list.
 struct slist_node
 {
 	struct slist_node *next;
-	node_data data;
+	slist_node_data data;
 };
 
-struct slist_node *slist_new_node(node_data data);
+struct slist_node *slist_new_node(slist_node_data data);
+void slist_free_node(struct slist_node *node);
 
 #ifdef __cplusplus
 }

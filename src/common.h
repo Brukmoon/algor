@@ -1,9 +1,9 @@
 /*
-* Common definitions
-* \author Michal H.
-* \email  MHlous@gmail.com
-*
-**/
+ * Common definitions
+ * \author Michal H.
+ * \email  MHlous@gmail.com
+ *
+ **/
 #ifndef COMMON_H
 #define COMMON_H
 
@@ -31,7 +31,7 @@ void swap(void *const first, void *const second, size_t object_size);
 void alloc_err(void);
 
 #ifdef __cplusplus
- }
+}
 #endif // __cplusplus
 
 #endif // COMMON_H

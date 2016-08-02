@@ -46,7 +46,7 @@ void selection_sort(void *const base, size_t const base_size, size_t const set_s
 	bool(*less)(const void *const first, const void *const second));
 
 #ifdef __cplusplus
- }
+}
 #endif // __cplusplus
 
 #endif // SIMPLE_SORTS_H

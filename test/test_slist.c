@@ -9,5 +9,7 @@ TEST_CASE(slist)
 	slist_push(list, &b);
 	slist_push(list, &c);
 	slist_push(list, &d);
+	slist_pull(list, NULL);
+	REQUIRE_EQ(list->length, 3);
 	slist_free(list, NULL);
 }

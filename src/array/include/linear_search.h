@@ -21,7 +21,7 @@ int linear_search(void const *const value,
 	bool(*equal)(const void *const first, const void *const second));
 
 #ifdef __cplusplus
- }
+}
 #endif // __cplusplus
 
 #endif /* LINEAR_SEARCH_H */

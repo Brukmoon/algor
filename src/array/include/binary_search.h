@@ -31,7 +31,7 @@ int binary_search(void const *const value,
 	int(*compare)(void const *const first, void const *const second));
 
 #ifdef __cplusplus
- }
+}
 #endif // __cplusplus
 
 #endif // BINARY_SEARCH
