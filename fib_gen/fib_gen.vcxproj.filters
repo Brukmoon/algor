@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\math\include\horners_scheme.h.h">
+    <ClInclude Include="..\src\math\include\horners_scheme.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
