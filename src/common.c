@@ -10,10 +10,8 @@ void alloc_err(void)
 
 void swap(void *const first, void *const second, size_t object_size)
 {
-	assert(first != NULL);
-	assert(second != NULL);
-	if (object_size == 0)
-		return;
+	assert(first && second);
+	assert(object_size > 0);
 	void *temp = malloc(object_size);
 	if (temp == NULL)
 		alloc_err();

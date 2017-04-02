@@ -3,18 +3,21 @@
 #include "binary_search.h"
 #include "simple_sorts.h"
 
+// returns lower than $value + 1 in $base array
 static size_t approx_binary_search(void *value, void *const base, size_t const base_size, size_t const set_size,
 	int(*compare)(const void *const first, const void *const second));
+
 static void shift_right(void *const base, size_t const base_size, size_t const shift_count);
 
 void binary_insertion_sort(void *const base, size_t const base_size, size_t const set_size,
 	int(*compare)(const void *const first, const void *const second))
 {
-	if (base == NULL || compare == NULL || base_size == 0)
-		return;
+	assert(base && compare);
+	assert(base_size > 0);
 	void *temp = malloc(base_size);
 	if (temp == NULL)
 		alloc_err();
+	// for every element from second value to last
 	for (size_t i = 1; i < set_size; ++i)
 	{
 		// search for arr[i]'s place in arr[0]:arr[i]

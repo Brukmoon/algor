@@ -14,16 +14,16 @@ extern "C" {
 #include "common.h"
 
 /*
- * Binary search.
+ * Binary search
  * \param value    Value searched for.
- * \param base     Pointer to array base.
- * \param set_size Length of the array.
+ * \param base     Pointer to array base (array[0]).
+ * \param set_size Length of the array (sizeof(arr)/sizeof(arr_t)).
  * \param compare  Compare used for set halving.
  *                 return: 0 if less
  *						   1 if equal
  *						   2 if more
  *						  -1 on error
- * \return Index of the value found, -1 if value is not found.
+ * \return Index of the $value found, -1 if $value is not found.
  *
  **/
 int binary_search(void const *const value, 

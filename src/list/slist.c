@@ -14,8 +14,7 @@ struct slist *slist_new()
 
 void slist_free(struct slist *list, void(*free_data)(slist_node_data data))
 {
-	if (list == NULL)
-		return;
+	assert(list);
 	if (slist_empty(list))
 		return;
 	struct slist_node *iter = list->tail;
@@ -40,8 +39,7 @@ void slist_free(struct slist *list, void(*free_data)(slist_node_data data))
 
 struct slist_node *slist_push(struct slist *list, slist_node_data data)
 {
-	if (list == NULL)
-		return NULL;
+	assert(list);
 	struct slist_node *node = slist_new_node(data);
 	if (slist_empty(list))
 		list->tail = node;
@@ -54,6 +52,7 @@ struct slist_node *slist_push(struct slist *list, slist_node_data data)
 
 void slist_pull(struct slist *list, void(*free_data)(slist_node_data data))
 {
+	assert(list);
 	if (slist_empty(list))
 		return;
 	struct slist_node *iter = list->tail, *prev = NULL;
@@ -75,7 +74,8 @@ void slist_pull(struct slist *list, void(*free_data)(slist_node_data data))
 
 bool slist_empty(struct slist const *list)
 {
-	if (list == NULL || list->tail == NULL)
+	assert(list);
+	if (list->tail == NULL)
 		return true;
 	return false;
 }

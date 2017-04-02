@@ -27,16 +27,12 @@ extern "C" {
  **/
 #define TEST_CASE_RUN(name) TEST_CASE_PREFIX()##name##()
 
-// REQUIRE fprintf parameters.
-#define FLF __FILE__, __LINE__, __FUNCTION__
 // Assertions.
-#define REQUIRE(expr, err_format, ...) do { if (!(expr)) { TEST_LOG(err_format, __VA_ARGS__); test_count_failed++; } test_count++; } while(0)
-#define REQUIRE_SORTED(arr, base_size, set_size, less) REQUIRE(sorted(arr, base_size, set_size, less), "%s(%d): error in %s: \"array sorted\" failed\n", FLF)
-#define REQUIRE_EQ(first, second) REQUIRE((first) == (second), "%s(%d): error in %s: \"%d == %d\" failed\n", FLF, first, second)
-#define REQUIRE_LESS(less, more) REQUIRE((less) < (more), "%s(%d): error in %s: \"%d < %d\" failed\n", FLF, less, more)
-#define REQUIRE_MORE(more, less) REQUIRE((more) > (less), "%s(%d): error in %s: \"%d > %d\" failed\n", FLF, more, less)
-#define REQUIRE_TRUE(expr) REQUIRE(expr, "%s(%d): error in %s: \"expression true\" failed\n", FLF)
-#define REQUIRE_FALSE(expr) REQUIRE(expr, "%s(%d): error in %s: \"expression false\" failed\n", FLF)
+#define REQUIRE(condition) do { if (!(condition)) { TEST_LOG("%s(%d): error in %s: \"%s\" failed\n", __FILE__, __LINE__, __FUNCTION__, #condition); test_count_failed++; } test_count++; } while(0)
+#define REQUIRE_SORTED(arr, base_size, set_size, less) REQUIRE(sorted(arr, base_size, set_size, less))
+#define REQUIRE_EQUAL(first, second) REQUIRE((first) == (second))
+#define REQUIRE_LESS(less, more) REQUIRE((less) < (more))
+#define REQUIRE_MORE(more, less) REQUIRE((more) > (less))
 
 // Target stream for logging.
 #define TEST_OUT_TARGET stderr

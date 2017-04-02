@@ -29,6 +29,9 @@
     <ClCompile Include="..\common.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fib_search.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\binary_search.h">
@@ -41,6 +44,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\fib_search.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

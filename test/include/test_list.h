@@ -13,7 +13,10 @@ extern "C" {
 
 #include "test.h"
 
-TEST_CASE(slist);
+TEST_CASE(slist_push);
+TEST_CASE(slist_pull);
+// testing language features
+TEST_CASE(language);
 
 #ifdef __cplusplus
 }

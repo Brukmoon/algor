@@ -33,7 +33,6 @@ void slist_free(struct slist *list, void (*free_data)(slist_node_data data));
  **/
 struct slist_node *slist_push(struct slist *list, slist_node_data data);
 // Remove the head node from the list.
-// WIP
 void slist_pull(struct slist *list, void(*free_data)(slist_node_data data));
 // Is the list empty?
 bool slist_empty(struct slist const *list);

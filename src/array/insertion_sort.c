@@ -4,8 +4,8 @@
 void insertion_sort(void *const base, size_t const base_size, size_t const set_size,
 	bool(*less)(const void *const first, const void *const second))
 {
-	if (base == NULL || less == NULL || base_size == 0)
-		return;
+	assert(base && less);
+	assert(base_size > 0);
 	void *temp = malloc(base_size);
 	if (temp == NULL)
 		alloc_err();

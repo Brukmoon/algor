@@ -11,13 +11,15 @@
 extern "C" {
 #endif // __cplusplus
 
+#include <assert.h>
 #include <stdbool.h>
 #include <stdlib.h>
 
-// Access element i of any array with base of size base_size.
+// Access element $index of any array with $base of size $base_size.
 #define ELEMENT(index, base, base_size) \
 	((char *)(base) + (index) * (base_size))	
 
+// Result of compare function for sorting algorituhs.
 enum compare_result
 {
 	LESS = 0,
@@ -25,10 +27,10 @@ enum compare_result
 	MORE = 2,
 };
 
-// Swap first and second values.
-void swap(void *const first, void *const second, size_t object_size);
 // Handle allocation error and possibly cleanup.
 void alloc_err(void);
+// Swap first and second values.
+void swap(void *const first, void *const second, size_t object_size);
 
 #ifdef __cplusplus
 }

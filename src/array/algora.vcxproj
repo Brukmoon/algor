@@ -22,6 +22,7 @@
     <ClCompile Include="..\common.c" />
     <ClCompile Include="binary_insertion_sort.c" />
     <ClCompile Include="binary_search.c" />
+    <ClCompile Include="fib_search.c" />
     <ClCompile Include="insertion_sort.c" />
     <ClCompile Include="linear_search.c" />
     <ClCompile Include="selection_sort.c" />
@@ -29,6 +30,7 @@
   <ItemGroup>
     <ClInclude Include="..\common.h" />
     <ClInclude Include="include\binary_search.h" />
+    <ClInclude Include="include\fib_search.h" />
     <ClInclude Include="include\linear_search.h" />
     <ClInclude Include="include\simple_sorts.h" />
   </ItemGroup>

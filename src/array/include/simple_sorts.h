@@ -37,9 +37,9 @@ void binary_insertion_sort(void *const base, size_t const base_size, size_t cons
 	int(*compare)(const void *const first, const void *const second));
 /*
  * Selection sort implementation.
- * \param base     Pointer to array base.
+ * \param base     Pointer to array $base.
  * \param set_size Length of the array.
- * \param less     Is first value smaller than the second?
+ * \param less     Is $first value smaller than the $second?
  *
  **/
 void selection_sort(void *const base, size_t const base_size, size_t const set_size,

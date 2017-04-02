@@ -3,8 +3,8 @@
 void selection_sort(void *const base, size_t const base_size, size_t const set_size,
 	bool(*less)(const void *const first, const void *const second))
 {
-	if (base == NULL || less == NULL || base_size == 0)
-		return;
+	assert(base && less);
+	assert(base_size > 0);
 	for (size_t i = 0; i < set_size; ++i)
 	{
 		// select last arr element as min
