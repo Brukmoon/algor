@@ -22,6 +22,7 @@
     <ClCompile Include="..\common.c" />
     <ClCompile Include="binary_insertion_sort.c" />
     <ClCompile Include="binary_search.c" />
+    <ClCompile Include="bubble_sort.c" />
     <ClCompile Include="fib_search.c" />
     <ClCompile Include="insertion_sort.c" />
     <ClCompile Include="linear_search.c" />

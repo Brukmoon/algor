@@ -23,26 +23,39 @@ extern "C" {
 void insertion_sort(void *const base, size_t const base_size, size_t const set_size, 
 	bool(*less)(const void *const first, const void *const second));
 /*
-* Insertion sort implemented with binary search.
-* \param base     Pointer to array base.
-* \param set_size Length of the array.
-* \param compare  Compare used for set halving.
-*                 return: 0 if less
-*						   1 if equal
-*						   2 if more
-*						  -1 on error
-*
-**/
+ * Insertion sort implemented with binary search.
+ * O(n^2)
+ * \param base     Pointer to array base.
+ * \param set_size Length of the array.
+ * \param compare  Compare used for set halving.
+ *                 return: 0 if less
+ *						   1 if equal
+ *						   2 if more
+ *						  -1 on error
+ *
+ **/
 void binary_insertion_sort(void *const base, size_t const base_size, size_t const set_size,
 	int(*compare)(const void *const first, const void *const second));
 /*
  * Selection sort implementation.
+ * O(n^2)
  * \param base     Pointer to array $base.
  * \param set_size Length of the array.
  * \param less     Is $first value smaller than the $second?
  *
  **/
 void selection_sort(void *const base, size_t const base_size, size_t const set_size,
+	bool(*less)(const void *const first, const void *const second));
+
+/*
+ * Bubble sort implementation.
+ * O(n^2)
+ * \param base     Pointer to array $base.
+ * \param set_size Length of the array.
+ * \param less     Is $first value smaller than the $second?
+ *
+ **/
+void bubble_sort(void *const base, size_t const base_size, size_t const set_size,
 	bool(*less)(const void *const first, const void *const second));
 
 #ifdef __cplusplus

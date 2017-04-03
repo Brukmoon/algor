@@ -3,6 +3,8 @@
 
 TEST_CASE(is_root)
 {
-	int coefficients[] = { 4, 9, 2, 3, 1 };
-	REQUIRE(is_root(2, coefficients, 5));
+	int coefficients1[] = { 1, -1 };
+	REQUIRE(is_root(1, coefficients1, 2));
+	int coefficients2[] = { 4, 9, 2, 3, 1 };
+	REQUIRE(!is_root(2, coefficients2, 5));
 }

@@ -13,7 +13,7 @@ extern "C" {
 
 #include <stdbool.h>
 
-	bool is_root(int x, int* coefficients, int level);
+bool is_root(int x, int* coefficients, int level);
 
 #ifdef __cplusplus
 }

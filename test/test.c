@@ -19,6 +19,7 @@ void run_tests(void)
 	TEST_CASE_RUN(language);
 	// math
 	TEST_CASE_RUN(is_root);
+	TEST_CASE_RUN(bubble_sort);
 }
 
 void final_statistics(void)

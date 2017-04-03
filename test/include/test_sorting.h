@@ -22,6 +22,7 @@ extern "C" {
 TEST_CASE(selection_sort);
 TEST_CASE(insertion_sort);
 TEST_CASE(binary_insertion_sort);
+TEST_CASE(bubble_sort);
 
 #ifdef __cplusplus
 }

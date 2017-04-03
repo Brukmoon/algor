@@ -32,6 +32,9 @@
     <ClCompile Include="fib_search.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bubble_sort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\binary_search.h">

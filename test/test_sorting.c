@@ -49,3 +49,10 @@ TEST_CASE(binary_insertion_sort)
 	binary_insertion_sort(data4, sizeof(int), sizeof(data4) / sizeof(int), compare);
 	REQUIRE_SORTED(data4, sizeof(int), sizeof(data4) / sizeof(int), less);
 }
+
+TEST_CASE(bubble_sort)
+{
+	int data1[] = { 1, 1, 3, 2, 0 };
+	bubble_sort(data1, sizeof(int), sizeof(data1) / sizeof(int), less);
+	REQUIRE_SORTED(data1, sizeof(int), sizeof(data1) / sizeof(int), less);
+}
